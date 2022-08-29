@@ -1,0 +1,13 @@
+speeches/19-198-0002.npy
+speeches/19-198-0003.npy
+speeches/19-198-0004.npy
+speeches/26-495-0003.npy
+speeches/26-495-0005.npy
+speeches/27-123349-0003.npy
+speeches/27-123349-0006.npy
+speeches/89-218-0001.npy
+speeches/89-218-0002.npy
+speeches/103-1240-0001.npy  
+speeches/103-1240-0002.npy    
+speeches/118-121721-0001.npy  
+speeches/118-121721-0002.npy  
