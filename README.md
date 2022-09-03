@@ -15,7 +15,22 @@ OpenL3 can provide embeddings of the length 512 or 6144 for sounds corresponding
 
 To solve the classification problem the fully-connected neural network with one hidden layer of 512 neurons is used.
 
-First, one needs to decide how many speeches will be used for each speaker in course of training. For this purpose we have calculated EER for 1,3, and 10 speeches per speaker on a small dataset containing only 3 different persons. The results for 3 and 10 speeches were found to be close to each other, therefore, in what follows, only 3 speeches per speaker are used for model training.
+First, one needs to decide how many speeches will be used for each speaker in course of training. For this purpose we have calculated EER for 1,3, and 10 speeches per speaker on a small dataset containing only 3 different persons. 
+For instance, the graphs for the determination of the EER are presented for the cases of 3 and 10 speeches per speaker. On each graph the results of few launches are shown. 
+
+3 speeches per speaker |  10 speeches per speaker
+:-------------------------:|:-------------------------:
+<img src="graph/03speeches.png" alt="drawing" width="100%"/>  |  <img src="graph/10speeches.png" alt="drawing" width="100%"/>
+
+In the table the minimal, maximal, and average values of the EER obtained in 10 launches are listed. 
+
+Speeches per Speaker | min EER (%)| max EER (%)| average EER (%)
+-------------------|------|----|---
+  1  | 3.7 | 11.6 | 8.3
+  3  | 1.3 |  6.9 | 3.4
+ 10  | 0.8 |  1.8 | 1.2
+ 
+Though the EER for the case when 10 speeches per speaker provide the most accurate result, in what follows we use only 3 speeches per speaker for training the model.
 
 The final classification model is trained on 10 speakers. This model without the last layer is saved to further discriminate the speakers.
 
