@@ -59,9 +59,15 @@ Speeches presented in [OpenLSR](https://www.openslr.org/resources/12/train-clean
 
 It is also interesting to investigate the performance of the embeddings of length 512, since less disk space is needed to store these files.
 
-More tests should be performed on a larger number of speakers. 
+More tests should be performed on a larger number of speakers. Present results look like a lucky incident.
 
 It is interesting to investigate the performance of the model on the noisy data sets from, e.g., phone calls.
+
+It is also intersting to move from 1 second frame-level comparison to speech-level comparison with the use of the so-called X-vectors, which is partially realised in [compare_speakers.py](compare_speakers.py) code.
+
+Change the self-written function which calculates the cosine similarity with the one realized in [scipy](https://docs.scipy.org/doc/scipy/reference/generated/scipy.spatial.distance.cosine.html).
+
+Use AM-Softmax to increase the distance between the classes as suggested in Ref.[4] and explained for pedestrians [here](https://towardsdatascience.com/additive-margin-softmax-loss-am-softmax-912e11ce1c6b).
 
 # Usefull References
 
@@ -76,3 +82,7 @@ It is interesting to investigate the performance of the model on the noisy data 
 [3] Z. Bai and X.-L. Zhang,
 ''Speaker Recognition Based on Deep Learning: An Overview'',
 [arXiv:2012.00931](https://arxiv.org/abs/2012.00931).
+
+[4] F. Wang, W. Liu, H. Liu, and J. Cheng,
+''Additive Margin Softmax for Face Verification'',
+[arXiv:1801.05599](https://arxiv.org/abs/1801.05599)
